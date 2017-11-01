@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int vec[10]={54, 6, 8, 30, 23, 5, 10, 7, 23, 51};
+    int i, j, minimo, aux;
+
+    for(i=0; i<10; i++){
+            minimo=i;
+            for(j=i+1; j<10; j++){
+                if(vec[j]<vec[minimo]){
+                    minimo=j;
+                }
+            }
+    aux=vec[i];
+    vec[i]=vec[minimo];
+    vec[minimo]=aux;
+    }
+    for(i=0; i<10; i++){
+        printf("%d, ", vec[i]);
+    }
+}
